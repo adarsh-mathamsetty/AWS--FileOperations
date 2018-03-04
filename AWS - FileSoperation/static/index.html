@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+</head>
+<style>
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+</style>
+<body>
+<h1 id = "message">AWS</h1>
+	<div>
+
+			<form action="/upload" method ="post" enctype = "multipart/form-data">
+               <h1 class="blue2">Upload Here</h1>
+					 Upload file: <input type="file" name="file" value="file" class="blue" placeholder="Enter Filename">
+					Add comments:<input type="text" name="comment" maxlength="120">
+					 <br> <br>
+					 <input type="submit" id="sub1" value="Upload" name="upload" class='description'>
+			 
+      
+			</form>
+
+	</div>
+<div>
+	<br>
+	<br>
+</div>
+    <div>
+
+				<form action="/download" method="get" enctype = "multipart/form-data">
+                    <h1 class="blue2">Download Here</h1>
+					Download file: <input type="text" name="dwnfile" placeholder="Enter Filename">
+						<input type="submit" id="sub2" value="Download" class='description'>
+                    
+				</form>
+	</div>
+<div>
+	<br>
+	<br>
+</div>
+    <div>
+
+
+				<form action="/list1" method="post" enctype = "multipart/form-data">
+                     <h1 class="blue2">List of files located in the bucket</h1></legend>
+					 <input type="submit" value="List Files" class='description'>
+					<br> <br>
+				</form>
+	</div>
+<div>
+	<br>
+	<br>
+</div>
+    <div>
+
+				<form action="/delete" method="get" enctype = "multipart/form-data">
+                     <h1 class="blue2">Delete files here</h1></legend>
+					what do you want to delete?<input type="text" name="delfile" placeholder="Enter Filename">
+				Keyword:<input type="text" name="keyword" maxlength="120">
+					<input type="submit" id=" sub1" value="Delete" class='description'>
+                     
+                </form>
+	</div>
+ <div>
+	<br>
+	<br>
+</div>
+<div>
+	 <form action="/logout">
+	 <button type="submit">Logout</button>
+	 </form>
+</div>
+</body>
+</html>
